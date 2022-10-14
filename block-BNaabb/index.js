@@ -9,8 +9,8 @@ function handleRequest(req, res) {
   req.on('end', () => {
     // res.setHeader('Content-Type', 'application/json');
     console.log(store);
-    res.write(JSON.stringify(store));
+    res.write(store);
+    res.end();
   });
-  res.end();
 }
 server.listen(3456);
